@@ -1,0 +1,42 @@
+<table>
+											<thead>
+												<tr>
+													<th>Stat</th>
+													<th>Value</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Name</td>
+													<td>Error</td>
+												</tr>
+												<tr>
+													<td>Discriminator</td>
+													<td>Error</td>
+												</tr>
+												<tr>
+													<td>ID</td>
+													<td>Error</td>
+												</tr>
+												<tr>
+													<td>Prefix</td>
+													<td>Error</td>
+												</tr>
+												<tr>
+													<td>Library</td>
+													<td>Error</td>
+												</tr>
+												<tr>
+													<td>Server Count</td>
+													<td>Error</td>
+												</tr>
+												<tr>
+													<td>Votes</td>
+													<td>Error</td>
+												</tr>
+												<tr>
+													<td>Monthly Votes</td>
+													<td>Error</td>
+												</tr>
+											</tbody>
+										</table>
