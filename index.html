@@ -1,25 +1,121 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
+<html><head>
 		<title>JacobSux Official Site</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="assets/css/main.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-loading">
+								<script>
+						var xmlHttp = createXmlHttpRequestObject();
+						
+						function createXmlHttpRequestObject(){
+							var xmlHttp;
+							
+							if(window.XMLHttpRequest) {
+								xmlHttp = new XMLHttpRequest();
+							}else{
+								xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+							}
+							
+							return xmlHttp;
+						}
+						
+							if(xmlHttp) {
+								if(xmlHttp) {
+								try{
+									xmlHttp.open("GET", "https://discordbots.org/api/bots/394019914157129728", true);
+									xmlHttp.onreadystatechange = handleServerResponse;
+									xmlHttp.send(null);
+								}catch(e) {
+									
+								}
+							}
+						}
+						
+						function handleServerResponse() {
+							servercount = document.getElementById("servercount");
+							ico = document.getElementById("ico");
+							if(xmlHttp.readyState==4) {
+							
+								if(xmlHttp.status==200) {
+									try {
+										response = xmlHttp.responseText
+										const parsedresponse = JSON.parse(response)
+										servercount.innerHTML = (parsedresponse.server_count + " Servers | " + parsedresponse.points + " Votes")
+										ico.href = ("https://cdn.discordapp.com/app-icons/394019914157129728/" + parsedresponse.avatar + ".png")
+									}catch(e) {
+									
+									}
+								}
+							
+							}
+						}
+						</script>
+	<link rel="icon" id="ico" href="https://cdn.discordapp.com/app-icons/394019914157129728/2759df1fe0b8ec03a26c5645bc19c652.png">
+	<style type="text/css">.backpack.dropzone {
+  font-family: 'SF UI Display', 'Segoe UI';
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+  font-weight: lighter;
+  color: white;
+  will-change: right;
+  z-index: 2147483647;
+  bottom: 20%;
+  background: #333;
+  position: fixed;
+  user-select: none;
+  transition: left .5s, right .5s;
+  right: 0px; }
+  .backpack.dropzone .animation {
+    height: 80px;
+    width: 250px;
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/hoverstate.png") left center; }
+  .backpack.dropzone .title::before {
+    content: 'Save to'; }
+  .backpack.dropzone.closed {
+    right: -250px; }
+  .backpack.dropzone.hover .animation {
+    animation: sxt-play-anim-hover 0.91s steps(21);
+    animation-fill-mode: forwards;
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/hoverstate.png") left center; }
+
+@keyframes sxt-play-anim-hover {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: -5250px; } }
+  .backpack.dropzone.saving .title::before {
+    content: 'Saving to'; }
+  .backpack.dropzone.saving .animation {
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/saving_loop.png") left center;
+    animation: sxt-play-anim-saving steps(59) 2.46s infinite; }
+
+@keyframes sxt-play-anim-saving {
+  100% {
+    background-position: -14750px; } }
+  .backpack.dropzone.saved .title::before {
+    content: 'Saved to'; }
+  .backpack.dropzone.saved .animation {
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/saved.png") left center;
+    animation: sxt-play-anim-saved steps(20) 0.83s forwards; }
+
+@keyframes sxt-play-anim-saved {
+  100% {
+    background-position: -5000px; } }
+</style></head>
+	<body class="" data-__gyazo-extension-added-paste-support="true">
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
 
 				<!-- Intro -->
-					<div id="intro">
-						<h1>JacobSux<br />
+					<div id="intro" class="">
+						<h1>JacobSux<br>
 						Advanced Censor Bot</h1>
 						<p>Message filter, Edited message filter, even nickname filter! JacobSux has it all to keep your discord server nice and free of curses :)</p>
 						<ul class="actions">
@@ -29,25 +125,26 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">JacobSux</a>
+						<a href="https://jacobsux.ml/" id="servercount" class="logo">126 Servers | 21 Votes</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">COMMANDS</a></li>
-							<li><a href="https://discord.gg/mx6Gcdb">SUPPORT</a></li>
-							<li><a href="https://www.jt3ch.net/">JT3CH.NET</a></li>
-							<li><a href="https://discordapp.com/oauth2/authorize?client_id=394019914157129728&permissions=8&scope=bot">INVITE</a></li>
-							<li><a href="https://discordbots.org/bot/394019914157129728/vote">VOTE</a></li>
-						</ul>
-						<ul class="icons">
+						
+						
+					<ul class="links">
+							<li class="active"><a href="https://jacobsux.ml/">COMMANDS</a></li>
+							<li><a href="https://discord.gg/mx6Gcdb" target="_blank">SUPPORT</a></li>
+							<li><a href="https://www.jt3ch.net/" target="_blank">JT3CH.NET</a></li>
+							<li><a href="https://jacobsux.ml/invite.html" target="_blank">INVITE</a></li>
+							<li><a href="https://discordbots.org/bot/394019914157129728/vote" target="_blank">VOTE</a></li>
+							<li><a href="https://discordbots.org/bot/394019914157129728/report" target="_blank">REPORT</a></li>
+						</ul><ul class="icons">
 						Owner Social Media:
-							<li><a href="https://twitter.com/julianberryessa" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://instagram.com/jpbberry" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://github.com/mcriper" class="icon fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+							<li><a href="https://twitter.com/julianberryessa" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://instagram.com/jpbberry" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/mcriper" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						</ul></nav>
 
 				<!-- Main -->
 					<div id="main">
@@ -55,13 +152,13 @@
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<span class="date">Bot 100% Hand Programmed </br> by Julian Berryessa</span>
-									<h2><a href="#">JacobSux Commands</a></h2>
-									<p>List Of Commands</p>
+									<span class="date">Bot 100% Hand Programmed <br> by Julian Berryessa</span>
+									<h2><a href="/invite.html">JacobSux</a></h2>
+									<p>Censor Bot</p>
 								</header>
-								<a class="image main"><img src="images/pic01.jpg" alt="" /></a>
+								<a class="image main"><img src="images/pic01.jpg" alt=""></a>
 								<ul class="actions">
-									<li><a href="https://discordapp.com/oauth2/authorize?client_id=394019914157129728&permissions=8&scope=bot" class="button big">INVITE</a></li>
+									<li><a href="https://discordapp.com/oauth2/authorize?client_id=394019914157129728&amp;permissions=8&amp;scope=bot" class="button big">INVITE</a></li>
 								</ul>
 							</article>
 
@@ -69,10 +166,10 @@
 						<!-- Footer -->
 							<footer>
 
-								</div>
-							</footer>
+								</footer></div>
+							
 
-					</div>
+					<div class="bg fixed" style="transform: none;"></div><a href="#navPanel" id="navPanelToggle">Menu</a></div>
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -80,10 +177,10 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; 2018 J_T3CH</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>© 2018 J_T3CH</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li><li>Powered By: <a href="https://discordbots.org/api/docs">DBLAPI</a></li></ul>
 					</div>
 
-			</div>
+			
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -93,5 +190,5 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-	</body>
-</html>
+	
+<div id="navPanel"><nav></nav><a href="#navPanel" class="close" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></a></div></body></html>
